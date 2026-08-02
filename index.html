@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Осман Нури — Портфолио</title>
+    <meta name="description" content="Портфолио Османа Нури — студента программной инженерии, backend-разработчика, создателя Minecraft-клона на C++/OpenGL и AI-проектов." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🚀%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- Прелоадер -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">ON<span class="preloader-dot">.</span></div>
+            <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
+            <div class="preloader-text">загружаю мир...</div>
+        </div>
+    </div>
+
+    <!-- Прогресс скролла -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- 3D фон -->
+    <canvas id="bg"></canvas>
+    <div class="grid-overlay"></div>
+
+    <!-- Кастомный курсор -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Навигация -->
+    <header class="nav">
+        <a class="nav-logo" href="#top">ON<span class="nav-logo-dot">.</span></a>
+        <nav class="nav-links">
+            <a href="#about">Обо мне</a>
+            <a href="#skills">Навыки</a>
+            <a href="#projects">Проекты</a>
+            <a href="#hobbies">Увлечения</a>
+        </nav>
+        <div class="nav-right">
+            <a class="nav-cta" href="#contact">Связаться</a>
+            <button class="nav-burger" id="navBurger" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-menu-links">
+            <a href="#about">01 · Обо мне</a>
+            <a href="#skills">02 · Навыки</a>
+            <a href="#projects">03 · Проекты</a>
+            <a href="#hobbies">04 · Увлечения</a>
+            <a href="#contact">05 · Контакт</a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="mailto:osman.muspaev@yandex.com">osman.muspaev@yandex.com</a>
+            <a href="https://t.me/Osman_Nuri_123" target="_blank" rel="noopener">@Osman_Nuri_123</a>
+        </div>
+    </div>
+
+    <!-- ГЕРОЙ -->
+    <section class="hero" id="top">
+        <div class="hero-inner">
+            <div class="hero-text" data-reveal>
+                <p class="hero-greeting">// привет, мир</p>
+                <h1 class="hero-name">Осман <span class="gradient-text">Нури</span></h1>
+                <div class="hero-type">
+                    <span id="typed"></span><span class="type-cursor">|</span>
+                </div>
+                <p class="hero-sub">
+                    Backend · C++ · Python · AI — строю системы, а не просто пишу код.
+                    Студент 2 курса «Программная инженерия» КФУ им. В. И. Вернадского.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#projects">
+                        <span>Смотреть проекты</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a class="btn btn-ghost" href="#contact">Написать мне</a>
+                </div>
+            </div>
+            <div class="hero-photo-wrap" data-reveal>
+                <div class="hero-photo-frame">
+                    <img src="photo.jpg" alt="Осман Нури" />
+                    <div class="photo-glow"></div>
+                    <div class="photo-badge">
+                        <span class="badge-dot"></span>
+                        <span>открыт к стажировкам</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <span>скролль</span>
+            <div class="scroll-line"><div class="scroll-line-dot"></div></div>
+        </div>
+    </section>
+
+    <!-- Бегущая строка -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <span>C++</span><i>◆</i><span>Python</span><i>◆</i><span>Golang</span><i>◆</i><span>JavaScript</span><i>◆</i><span>Swift</span><i>◆</i><span>OpenGL</span><i>◆</i><span>PostgreSQL</span><i>◆</i><span>Docker</span><i>◆</i><span>MongoDB</span><i>◆</i><span>Redis</span><i>◆</i><span>Linux</span><i>◆</i><span>AI</span><i>◆</i>
+            <span>C++</span><i>◆</i><span>Python</span><i>◆</i><span>Golang</span><i>◆</i><span>JavaScript</span><i>◆</i><span>Swift</span><i>◆</i><span>OpenGL</span><i>◆</i><span>PostgreSQL</span><i>◆</i><span>Docker</span><i>◆</i><span>MongoDB</span><i>◆</i><span>Redis</span><i>◆</i><span>Linux</span><i>◆</i><span>AI</span><i>◆</i>
+        </div>
+    </div>
+
+    <!-- ОБО МНЕ -->
+    <section class="section" id="about">
+        <div class="container">
+            <p class="section-tag" data-reveal>01 · обо мне</p>
+            <h2 class="section-title" data-reveal>Я строю <span class="gradient-text">полезное</span>,<br/>а не просто изучаю технологии</h2>
+            <div class="about-grid">
+                <div class="about-text" data-reveal>
+                    <p>
+                        Мне 17 лет, я живу в Симферополе. В IT пришёл осознанно: в 11 классе меня
+                        заворожило, как устроены сайты и сервисы изнутри, и я начал изучать всё
+                        самостоятельно. Начал с HTML и CSS — позже многих, но за год обогнал
+                        большинство однокурсников благодаря полной отдаче и интересу к делу.
+                    </p>
+                    <p>
+                        Моя настоящая стихия — <strong>бэкенд и алгоритмы</strong>. Я получаю удовольствие,
+                        когда выстраиваю логику серверной части и продумываю эффективные решения.
+                        Сейчас активно работаю над собственным 3D-движком на C++/OpenGL и изучаю
+                        Vulkan для более глубокого контроля над графикой.
+                    </p>
+                    <p>
+                        Я — холодный и рациональный разработчик: важнее процесс и качество решения,
+                        чем восторг от «заработало». Спокойно отношусь к критике — это точка роста.
+                    </p>
+                </div>
+                <div class="about-facts" data-reveal>
+                    <div class="fact">
+                        <span class="fact-num gradient-text"><span class="count" data-count="2">0</span></span>
+                        <span class="fact-label">крупных командных<br/>проекта</span>
+                    </div>
+                    <div class="fact">
+                        <span class="fact-num gradient-text"><span class="count" data-count="1">0</span></span>
+                        <span class="fact-label">собственный 3D-движок<br/>на C++/OpenGL</span>
+                    </div>
+                    <div class="fact">
+                        <span class="fact-num gradient-text"><span class="count" data-count="6">0</span>+</span>
+                        <span class="fact-label">языков<br/>программирования</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-bottom" data-reveal>
+                <div class="terminal">
+                    <div class="terminal-head">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">osman@dev: ~/profile</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></p>
+                        <p class="t-out">→ Осман Нури, 17 · студент «Программной инженерии»</p>
+                        <p><span class="t-prompt">$</span> <span class="t-cmd">cat focus.txt</span></p>
+                        <p class="t-out">→ backend · алгоритмы · низкоуровневая графика</p>
+                        <p><span class="t-prompt">$</span> <span class="t-cmd">ls ./projects/</span></p>
+                        <p class="t-out">→ moodle-like / crypto-ai / minecraft-clone</p>
+                        <p><span class="t-prompt">$</span> <span class="t-cmd">./dream --plan</span></p>
+                        <p class="t-out t-blink">→ building my own startup... █</p>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <div>
+                            <span class="timeline-date">11 класс</span>
+                            <p>Начал с HTML и CSS — позже многих</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <div>
+                            <span class="timeline-date">1 курс</span>
+                            <p>Догнал и перегнал однокурсников, начал помогать другим</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <div>
+                            <span class="timeline-date">2 курс · сейчас</span>
+                            <p>Микросервисы, AI, свой 3D-движок на OpenGL</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <div>
+                            <span class="timeline-date">Цель</span>
+                            <p>Собственный стартап и путешествия</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- НАВЫКИ -->
+    <section class="section" id="skills">
+        <div class="container">
+            <p class="section-tag" data-reveal>02 · стек</p>
+            <h2 class="section-title" data-reveal>Технологии, с которыми<br/>я <span class="gradient-text">работаю</span></h2>
+
+            <div class="skills-grid">
+                <div class="skill-card" data-reveal>
+                    <div class="skill-head">
+                        <span class="skill-icon">⚙️</span>
+                        <h3>Языки</h3>
+                    </div>
+                    <div class="chips">
+                        <span class="chip">Python</span>
+                        <span class="chip">C++</span>
+                        <span class="chip">Golang</span>
+                        <span class="chip">JavaScript</span>
+                        <span class="chip">Swift</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-reveal>
+                    <div class="skill-head">
+                        <span class="skill-icon">🗄️</span>
+                        <h3>Базы данных</h3>
+                    </div>
+                    <div class="chips">
+                        <span class="chip">PostgreSQL</span>
+                        <span class="chip">MongoDB</span>
+                        <span class="chip">Redis</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-reveal>
+                    <div class="skill-head">
+                        <span class="skill-icon">🐳</span>
+                        <h3>DevOps / Инфраструктура</h3>
+                    </div>
+                    <div class="chips">
+                        <span class="chip">Docker</span>
+                        <span class="chip">Swarm</span>
+                        <span class="chip">Ansible</span>
+                        <span class="chip">Jenkins</span>
+                        <span class="chip">Git</span>
+                        <span class="chip">Linux</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-reveal>
+                    <div class="skill-head">
+                        <span class="skill-icon">🎮</span>
+                        <h3>Графика</h3>
+                    </div>
+                    <div class="chips">
+                        <span class="chip">OpenGL</span>
+                        <span class="chip">Vulkan (в планах)</span>
+                        <span class="chip">SFML</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-reveal>
+                    <div class="skill-head">
+                        <span class="skill-icon">🧠</span>
+                        <h3>AI / ML</h3>
+                    </div>
+                    <div class="chips">
+                        <span class="chip">AI-модули</span>
+                        <span class="chip">Интеграция в веб</span>
+                        <span class="chip">Торговые стратегии</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-reveal>
+                    <div class="skill-head">
+                        <span class="skill-icon">🏗️</span>
+                        <h3>Архитектура</h3>
+                    </div>
+                    <div class="chips">
+                        <span class="chip">Микросервисы</span>
+                        <span class="chip">API Gateway</span>
+                        <span class="chip">Безопасность</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПРОЕКТЫ -->
+    <section class="section" id="projects">
+        <div class="container">
+            <p class="section-tag" data-reveal>03 · проекты</p>
+            <h2 class="section-title" data-reveal>Что я уже <span class="gradient-text">создаю</span></h2>
+
+            <div class="projects-list">
+                <article class="project" data-reveal>
+                    <div class="project-index">01</div>
+                    <div class="project-body">
+                        <div class="project-top">
+                            <h3>Платформа для тестирования <span class="project-emoji">📘</span></h3>
+                            <p class="project-tags">C++ · Golang · Микросервисы</p>
+                        </div>
+                        <p>
+                            Аналог Moodle: преподаватели создают тесты, студенты проходят их
+                            с автоматической проверкой. Я отвечал за бизнес-логику на C++,
+                            половину Telegram-модуля на Golang и связь между модулями.
+                        </p>
+                        <div class="project-role">Моя роль: бизнес-логика · интеграция · архитектура</div>
+                    </div>
+                </article>
+
+                <article class="project" data-reveal>
+                    <div class="project-index">02</div>
+                    <div class="project-body">
+                        <div class="project-top">
+                            <h3>Онлайн-биржа с AI-ассистентом <span class="project-emoji">📈</span></h3>
+                            <p class="project-tags">Python · AI · Gateway · Frontend</p>
+                        </div>
+                        <p>
+                            График криптовалют в реальном времени, сделки с виртуальным балансом
+                            и встроенный AI-помощник для написания торговых стратегий.
+                            На серверной стороне крутятся Python-стратегии с собственной
+                            библиотекой, известной AI.
+                        </p>
+                        <div class="project-role">Моя роль: AI-ядро · фронтенд · gateway · безопасность</div>
+                    </div>
+                </article>
+
+                <article class="project" data-reveal>
+                    <div class="project-index">03</div>
+                    <div class="project-body">
+                        <div class="project-top">
+                            <h3>Minecraft-клон на C++/OpenGL <span class="project-emoji">🎮</span></h3>
+                            <p class="project-tags">C++ · OpenGL · Vulkan (в планах)</p>
+                        </div>
+                        <p>
+                            Мой самый личный и амбициозный проект. Процедурная генерация мира,
+                            чанковая система 4×4, рендеринг на GPU, ломание и установка блоков,
+                            режим полёта. Доказывает, что я не просто изучаю C++ по учебникам —
+                            я строю настоящий 3D-движок.
+                        </p>
+                        <div class="project-role">Стек: C++, OpenGL, Git, Linux</div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- УВЛЕЧЕНИЯ И ЯЗЫКИ -->
+    <section class="section" id="hobbies">
+        <div class="container">
+            <p class="section-tag" data-reveal>04 · вне кода</p>
+            <h2 class="section-title" data-reveal>Жизнь <span class="gradient-text">за пределами</span> IDE</h2>
+
+            <div class="hobbies-grid">
+                <div class="hobby-card" data-reveal>
+                    <span class="hobby-icon">✈️</span>
+                    <h3>Путешествия</h3>
+                    <p>Люблю открывать новое. Пока поездки к озёрам и морю — но мечтаю о больших путешествиях.</p>
+                </div>
+                <div class="hobby-card" data-reveal>
+                    <span class="hobby-icon">🎬</span>
+                    <h3>Аниме</h3>
+                    <p>Любимый жанр, вдохновение и отдых от алгоритмов.</p>
+                </div>
+                <div class="hobby-card" data-reveal>
+                    <span class="hobby-icon">🎮</span>
+                    <h3>Игры и манга</h3>
+                    <p>Гейминг с детства, чтение манги — и разбор того, как устроены игры изнутри.</p>
+                </div>
+                <div class="hobby-card lang-card" data-reveal>
+                    <span class="hobby-icon">🗣️</span>
+                    <h3>Языки</h3>
+                    <ul class="lang-list">
+                        <li>Русский <span>свободно</span></li>
+                        <li>Крымскотатарский <span>свободно</span></li>
+                        <li>Турецкий <span>базовый</span></li>
+                        <li>Английский <span>начальный</span></li>
+                        <li>Арабский <span>чтение без перевода</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КОНТАКТ -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-card" data-reveal>
+                <p class="section-tag">05 · контакт</p>
+                <h2 class="section-title">Хотите работать<br/>вместе? <span class="gradient-text">Давайте обсудим</span></h2>
+                <p class="contact-text">
+                    Открыт к стажировкам и проектным задачам. Пишите — отвечу с удовольствием.
+                </p>
+                <div class="contact-actions">
+                    <a class="btn btn-primary" href="mailto:osman.muspaev@yandex.com">
+                        <span>osman.muspaev@yandex.com</span>
+                    </a>
+                    <a class="btn btn-ghost" href="https://t.me/Osman_Nuri_123" target="_blank" rel="noopener">
+                        <span>@Osman_Nuri_123</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Осман Нури · Симферополь · сделано с <span class="heart">♥</span> и кодом</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
