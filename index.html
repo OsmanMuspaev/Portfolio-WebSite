@@ -19,29 +19,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-    <!-- Page preloader -->
-    <div class="preloader" id="preloader">
-        <div class="preloader-inner">
-            <div class="preloader-logo">ON<span class="preloader-dot">.</span></div>
-            <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
-            <div class="preloader-text">загружаю мир...</div>
-        </div>
-    </div>
-
     <!-- Scroll progress indicator -->
     <div class="scroll-progress" id="scrollProgress"></div>
-
-    <!-- Three-dimensional background -->
-    <canvas id="bg"></canvas>
-    <div class="grid-overlay"></div>
-
-    <!-- Custom cursor -->
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-glow" id="cursorGlow"></div>
 
     <!-- Main navigation -->
     <header class="nav">
@@ -82,11 +65,10 @@
                 <p class="hero-greeting">// привет, мир</p>
                 <h1 class="hero-name">Осман <span class="gradient-text">Нури</span></h1>
                 <div class="hero-type">
-                    <span id="typed"></span><span class="type-cursor">|</span>
+                    <span>C++ · Backend Developer</span>
                 </div>
                 <p class="hero-sub">
-                    C++ · Backend · Golang · Python — проектирую компиляторы и распределённые системы.
-                    Студент программной инженерии КФУ им. В. И. Вернадского.
+                    C++ · backend · Go · Python. Учусь на программной инженерии в КФУ, интересуюсь компиляторами, серверной разработкой и компьютерной графикой.
                 </p>
                 <div class="hero-actions">
                     <a class="btn btn-primary" href="#projects">
@@ -113,101 +95,22 @@
         </div>
     </section>
 
-    <!-- Technology marquee -->
-    <div class="marquee">
-        <div class="marquee-track">
-            <span>C++</span><i>◆</i><span>Python</span><i>◆</i><span>Golang</span><i>◆</i><span>JavaScript</span><i>◆</i><span>Swift</span><i>◆</i><span>OpenGL</span><i>◆</i><span>PostgreSQL</span><i>◆</i><span>Docker</span><i>◆</i><span>MongoDB</span><i>◆</i><span>Redis</span><i>◆</i><span>Linux</span><i>◆</i>
-            <span>C++</span><i>◆</i><span>Python</span><i>◆</i><span>Golang</span><i>◆</i><span>JavaScript</span><i>◆</i><span>Swift</span><i>◆</i><span>OpenGL</span><i>◆</i><span>PostgreSQL</span><i>◆</i><span>Docker</span><i>◆</i><span>MongoDB</span><i>◆</i><span>Redis</span><i>◆</i><span>Linux</span><i>◆</i>
-        </div>
-    </div>
-
     <!-- About section -->
     <section class="section" id="about">
         <div class="container">
             <p class="section-tag" data-reveal>01 · обо мне</p>
-            <h2 class="section-title" data-reveal>Я строю <span class="gradient-text">полезное</span>,<br/>а не просто изучаю технологии</h2>
+            <h2 class="section-title" data-reveal>Разработка на стыке C++ и <span class="gradient-text">backend.</span></h2>
             <div class="about-grid">
                 <div class="about-text" data-reveal>
-                    <p>
-                        Я живу в Симферополе и специализируюсь на системной и серверной разработке. В IT пришёл осознанно: в 11 классе меня
-                        заворожило, как устроены сайты и сервисы изнутри, и я начал изучать всё
-                        самостоятельно. Начал с HTML и CSS — позже многих, но за год обогнал
-                        большинство однокурсников благодаря полной отдаче и интересу к делу.
-                    </p>
-                    <p>
-                        Моя настоящая стихия — <strong>бэкенд и алгоритмы</strong>. Я получаю удовольствие,
-                        когда выстраиваю логику серверной части и продумываю эффективные решения.
-                        Сейчас развиваю компилятор Aevix на C++/LLVM и собственный 3D-движок на C++/OpenGL.
-                    </p>
-                    <p>
-                        Я — холодный и рациональный разработчик: важнее процесс и качество решения,
-                        чем восторг от «заработало». Спокойно отношусь к критике — это точка роста.
-                    </p>
+                    <p>Я Осман, учусь на программной инженерии в КФУ им. В. И. Вернадского. В разработке около двух лет; сейчас ищу позицию junior-разработчика или стажировку с реальными инженерными задачами.</p>
+                    <p>Основные направления — C++ и серверная разработка на Go и Python. В личных проектах делаю компилятор Aevix и воксельный движок, а в командной работе занимался тестовым ядром и интеграцией микросервисов.</p>
                 </div>
-                <div class="about-facts" data-reveal>
-                    <div class="fact">
-                        <span class="fact-num gradient-text"><span class="count" data-count="2">0</span></span>
-                        <span class="fact-label">крупных командных<br/>проекта</span>
-                    </div>
-                    <div class="fact">
-                        <span class="fact-num gradient-text"><span class="count" data-count="1">0</span></span>
-                        <span class="fact-label">собственный 3D-движок<br/>на C++/OpenGL</span>
-                    </div>
-                    <div class="fact">
-                        <span class="fact-num gradient-text"><span class="count" data-count="6">0</span>+</span>
-                        <span class="fact-label">языков<br/>программирования</span>
-                    </div>
-                </div>
-            </div>
-            <div class="about-bottom" data-reveal>
-                <div class="terminal">
-                    <div class="terminal-head">
-                        <span class="terminal-dot red"></span>
-                        <span class="terminal-dot yellow"></span>
-                        <span class="terminal-dot green"></span>
-                        <span class="terminal-title">osman@dev: ~/profile</span>
-                    </div>
-                    <div class="terminal-body">
-                        <p><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></p>
-                        <p class="t-out">→ Осман Нури Муспаев · C++ / Backend Developer</p>
-                        <p><span class="t-prompt">$</span> <span class="t-cmd">cat focus.txt</span></p>
-                        <p class="t-out">→ backend · алгоритмы · низкоуровневая графика</p>
-                        <p><span class="t-prompt">$</span> <span class="t-cmd">ls ./projects/</span></p>
-                        <p class="t-out">→ moodle-like / crypto-ai / minecraft-clone</p>
-                        <p><span class="t-prompt">$</span> <span class="t-cmd">./dream --plan</span></p>
-                        <p class="t-out t-blink">→ building my own startup... █</p>
-                    </div>
-                </div>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <span class="timeline-dot"></span>
-                        <div>
-                            <span class="timeline-date">11 класс</span>
-                            <p>Начал с HTML и CSS — позже многих</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-dot"></span>
-                        <div>
-                            <span class="timeline-date">1 курс</span>
-                            <p>Догнал и перегнал однокурсников, начал помогать другим</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-dot"></span>
-                        <div>
-                            <span class="timeline-date">2 курс · сейчас</span>
-                            <p>Aevix, микросервисы, свой 3D-движок на OpenGL</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-dot"></span>
-                        <div>
-                            <span class="timeline-date">Цель</span>
-                            <p>Собственный стартап и путешествия</p>
-                        </div>
-                    </div>
-                </div>
+                <aside class="about-profile" data-reveal aria-label="Профиль">
+                    <div class="profile-row"><span>Роль</span><p>Junior C++ / Backend Developer</p></div>
+                    <div class="profile-row"><span>Учёба</span><p>КФУ · программная инженерия</p></div>
+                    <div class="profile-row"><span>Локация</span><p>Симферополь · удалённо</p></div>
+                    <div class="profile-row"><span>Языки</span><p>Русский · английский A2 · турецкий A2</p></div>
+                </aside>
             </div>
         </div>
     </section>
@@ -216,12 +119,12 @@
     <section class="section" id="skills">
         <div class="container">
             <p class="section-tag" data-reveal>02 · стек</p>
-            <h2 class="section-title" data-reveal>Технологии, с которыми<br/>я <span class="gradient-text">работаю</span></h2>
+            <h2 class="section-title" data-reveal>Инструменты в моих <span class="gradient-text">проектах.</span></h2>
 
             <div class="skills-grid">
                 <div class="skill-card" data-reveal>
                     <div class="skill-head">
-                        <span class="skill-icon">⚙️</span>
+                        <span class="skill-icon">01</span>
                         <h3>Языки</h3>
                     </div>
                     <div class="chips">
@@ -229,65 +132,47 @@
                         <span class="chip">C++</span>
                         <span class="chip">Golang</span>
                         <span class="chip">JavaScript</span>
-                        <span class="chip">Swift</span>
+                        <span class="chip">SQL</span>
+                        <span class="chip">Bash</span>
                     </div>
                 </div>
                 <div class="skill-card" data-reveal>
                     <div class="skill-head">
-                        <span class="skill-icon">🗄️</span>
+                        <span class="skill-icon">02</span>
                         <h3>Базы данных</h3>
                     </div>
                     <div class="chips">
                         <span class="chip">PostgreSQL</span>
                         <span class="chip">MongoDB</span>
+                        <span class="chip">MySQL</span>
                         <span class="chip">Redis</span>
                     </div>
                 </div>
                 <div class="skill-card" data-reveal>
                     <div class="skill-head">
-                        <span class="skill-icon">🐳</span>
-                        <h3>DevOps / Инфраструктура</h3>
+                        <span class="skill-icon">03</span>
+                        <h3>Инструменты</h3>
                     </div>
                     <div class="chips">
                         <span class="chip">Docker</span>
-                        <span class="chip">Swarm</span>
-                        <span class="chip">Ansible</span>
-                        <span class="chip">Jenkins</span>
                         <span class="chip">Git</span>
                         <span class="chip">Linux</span>
+                        <span class="chip">Nginx</span>
+                        <span class="chip">CI/CD</span>
                     </div>
                 </div>
                 <div class="skill-card" data-reveal>
                     <div class="skill-head">
-                        <span class="skill-icon">🎮</span>
-                        <h3>Графика</h3>
+                        <span class="skill-icon">04</span>
+                        <h3>Системная разработка</h3>
                     </div>
                     <div class="chips">
                         <span class="chip">OpenGL</span>
-                        <span class="chip">Vulkan (в планах)</span>
-                        <span class="chip">SFML</span>
-                    </div>
-                </div>
-                <div class="skill-card" data-reveal>
-                    <div class="skill-head">
-                        <span class="skill-icon">🧩</span>
-                        <h3>Компиляторы</h3>
-                    </div>
-                    <div class="chips">
                         <span class="chip">LLVM</span>
                         <span class="chip">AST</span>
-                        <span class="chip">Статическая типизация</span>
-                    </div>
-                </div>
-                <div class="skill-card" data-reveal>
-                    <div class="skill-head">
-                        <span class="skill-icon">🏗️</span>
-                        <h3>Архитектура</h3>
-                    </div>
-                    <div class="chips">
-                        <span class="chip">Микросервисы</span>
-                        <span class="chip">API Gateway</span>
-                        <span class="chip">Безопасность</span>
+                        <span class="chip">Многопоточность</span>
+                        <span class="chip">Алгоритмы</span>
+                        <span class="chip">Управление памятью</span>
                     </div>
                 </div>
             </div>
@@ -298,55 +183,57 @@
     <section class="section" id="projects">
         <div class="container">
             <p class="section-tag" data-reveal>03 · проекты</p>
-            <h2 class="section-title" data-reveal>Что я уже <span class="gradient-text">создаю</span></h2>
+            <h2 class="section-title" data-reveal>Проекты, над которыми я <span class="gradient-text">работал.</span></h2>
 
             <div class="projects-list">
-                <article class="project" data-reveal>
-                    <div class="project-index">01</div>
+                <article class="project project-featured" data-reveal>
+                    <div class="project-index">01<span>КОМПИЛЯТОР</span></div>
                     <div class="project-body">
                         <div class="project-top">
-                            <h3>Платформа для тестирования <span class="project-emoji">📘</span></h3>
-                            <p class="project-tags">C++ · Golang · Микросервисы</p>
-                        </div>
-                        <p>
-                            Аналог Moodle: преподаватели создают тесты, студенты проходят их
-                            с автоматической проверкой. Я отвечал за бизнес-логику на C++,
-                            половину Telegram-модуля на Golang и связь между модулями.
-                        </p>
-                        <div class="project-role">Моя роль: бизнес-логика · интеграция · архитектура</div>
-                    </div>
-                </article>
-
-                <article class="project" data-reveal>
-                    <div class="project-index">02</div>
-                    <div class="project-body">
-                        <div class="project-top">
-                            <h3>Компилятор Aevix <span class="project-emoji">⌘</span></h3>
+                            <h3>Aevix</h3>
                             <p class="project-tags">C++ · LLVM · VS Code</p>
                         </div>
                         <p>
-                            Разрабатываю компилятор языка программирования с нуля: лексический и
-                            синтаксический анализ, AST и отдельный этап семантической проверки.
-                            Также создал расширение VS Code с подсветкой синтаксиса.
+                            Собственный язык программирования и компилятор. Переписал фронтенд на C++: лексический и синтаксический анализ, AST и семантическая проверка. Компиляция стала в 20 раз быстрее относительно первого прототипа.
                         </p>
-                        <div class="project-role">Моя роль: архитектура компилятора · C++ · LLVM</div>
-                        <a class="project-role" href="https://github.com/AevixLang/Aevix" target="_blank" rel="noopener noreferrer">GitHub: AevixLang/Aevix ↗</a>
+                        <div class="project-details">
+                            <div><span>КОМПИЛЯТОР</span><p>Sema · Arenas &amp; Epochs · Hot Path: векторизация и выравнивание по кэш-линиям</p></div>
+                            <div><span>ИНСТРУМЕНТ</span><p>Расширение VS Code: подсветка синтаксиса и иконки файлов</p></div>
+                        </div>
+                        <a class="project-link" href="https://github.com/AevixLang/Aevix" target="_blank" rel="noopener noreferrer">Код и документация <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="compiler-flow" aria-label="Этапы компилятора"><span>Lexer</span><i></i><span>Parser</span><i></i><span>AST</span><i></i><span>LLVM</span></div>
+                </article>
+
+                <article class="project" data-reveal>
+                    <div class="project-index">02<span>BACKEND</span></div>
+                    <div class="project-body">
+                        <div class="project-top">
+                            <h3>Платформа тестирования</h3>
+                            <p class="project-tags">C++ · Go · Redis · PostgreSQL</p>
+                        </div>
+                        <p>
+                            Платформа связывает веб-интерфейс, C++-ядро автоматической проверки и Go-сервис Telegram-уведомлений. Реализовал бизнес-логику тестирования, работу с сессиями и интеграцию модулей через Redis.
+                        </p>
+                        <div class="project-details">
+                            <div><span>МОЯ ЧАСТЬ</span><p>C++ backend · Go-сервис · интеграция</p></div>
+                            <div><span>ИНФРАСТРУКТУРА</span><p>Redis · PostgreSQL · Docker · REST API</p></div>
+                        </div>
                     </div>
                 </article>
 
                 <article class="project" data-reveal>
-                    <div class="project-index">03</div>
+                    <div class="project-index">03<span>OPENGL</span></div>
                     <div class="project-body">
                         <div class="project-top">
-                            <h3>Minecraft-клон на C++/OpenGL <span class="project-emoji">🎮</span></h3>
-                            <p class="project-tags">C++ · OpenGL · Vulkan (в планах)</p>
+                            <h3>Воксельный движок</h3>
+                            <p class="project-tags">C++ · OpenGL</p>
                         </div>
-                        <p>
-                            Мой самый личный и амбициозный проект. Процедурная генерация мира,
-                            чанковая система 4×4, рендеринг на GPU, ломание и установка блоков,
-                            режим полёта и архитектуру для дальнейшего развития.
-                        </p>
-                        <div class="project-role">Стек: C++, OpenGL, Git, Linux</div>
+                        <p>Процедурная генерация мира, чанковая сетка 4×4 и отрисовка геометрии на GPU. Реализовал разрушение и установку блоков; проектирую рендер для дальнейшего развития.</p>
+                        <div class="project-details">
+                            <div><span>ГРАФИКА</span><p>OpenGL · GPU rendering</p></div>
+                            <div><span>МИР</span><p>Генерация · чанки · интерактивные блоки</p></div>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -379,11 +266,9 @@
                     <span class="hobby-icon">🗣️</span>
                     <h3>Языки</h3>
                     <ul class="lang-list">
-                        <li>Русский <span>свободно</span></li>
-                        <li>Крымскотатарский <span>свободно</span></li>
-                        <li>Турецкий <span>базовый</span></li>
-                        <li>Английский <span>начальный</span></li>
-                        <li>Арабский <span>чтение без перевода</span></li>
+                        <li>Русский <span>родной</span></li>
+                        <li>Английский <span>A2 · тех. документация</span></li>
+                        <li>Турецкий <span>A2</span></li>
                     </ul>
                 </div>
             </div>
@@ -418,7 +303,6 @@
         <p>© 2026 Осман Нури · Симферополь · сделано с <span class="heart">♥</span> и кодом</p>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
