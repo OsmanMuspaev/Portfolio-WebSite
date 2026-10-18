@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Осман Нури — Портфолио</title>
-    <meta name="description" content="Портфолио Османа Нури — студента программной инженерии, backend-разработчика, создателя Minecraft-клона на C++/OpenGL и AI-проектов." />
+    <meta name="description" content="Портфолио Османа Нури Муспаева — разработчика C++ и backend-систем." />
     <meta name="theme-color" content="#05060a" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Осман Нури — Портфолио" />
-    <meta property="og:description" content="Backend · C++ · Python · AI. Студент «Программной инженерии», создаю микросервисы и свой 3D-движок на OpenGL." />
+    <meta property="og:description" content="C++ · Backend · Golang · Python. Разрабатываю компилятор Aevix, микросервисы и 3D-движок на OpenGL." />
     <meta property="og:image" content="photo.jpg" />
     <meta property="og:locale" content="ru_RU" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Осман Нури — Портфолио" />
-    <meta name="twitter:description" content="Backend · C++ · Python · AI. Студент «Программной инженерии»." />
+    <meta name="twitter:description" content="C++ · Backend · Golang · Python. Портфолио Османа Нури Муспаева." />
     <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="stylesheet" href="css/style.css" />
@@ -23,7 +23,7 @@
 </head>
 <body>
 
-    <!-- Прелоадер -->
+    <!-- Page preloader -->
     <div class="preloader" id="preloader">
         <div class="preloader-inner">
             <div class="preloader-logo">ON<span class="preloader-dot">.</span></div>
@@ -32,18 +32,18 @@
         </div>
     </div>
 
-    <!-- Прогресс скролла -->
+    <!-- Scroll progress indicator -->
     <div class="scroll-progress" id="scrollProgress"></div>
 
-    <!-- 3D фон -->
+    <!-- Three-dimensional background -->
     <canvas id="bg"></canvas>
     <div class="grid-overlay"></div>
 
-    <!-- Кастомный курсор -->
+    <!-- Custom cursor -->
     <div class="cursor" id="cursor"></div>
     <div class="cursor-glow" id="cursorGlow"></div>
 
-    <!-- Навигация -->
+    <!-- Main navigation -->
     <header class="nav">
         <a class="nav-logo" href="#top">ON<span class="nav-logo-dot">.</span></a>
         <nav class="nav-links">
@@ -60,7 +60,7 @@
         </div>
     </header>
 
-    <!-- Мобильное меню -->
+    <!-- Mobile navigation -->
     <div class="mobile-menu" id="mobileMenu">
         <nav class="mobile-menu-links">
             <a href="#about">01 · Обо мне</a>
@@ -71,11 +71,11 @@
         </nav>
         <div class="mobile-menu-footer">
             <a href="mailto:osman.muspaev@yandex.com">osman.muspaev@yandex.com</a>
-            <a href="https://t.me/Osman_Nuri_123" target="_blank" rel="noopener">@Osman_Nuri_123</a>
+            <a href="https://t.me/Osman_Nuri_123" target="_blank" rel="noopener noreferrer">@Osman_Nuri_123</a>
         </div>
     </div>
 
-    <!-- ГЕРОЙ -->
+    <!-- Hero section -->
     <section class="hero" id="top">
         <div class="hero-inner">
             <div class="hero-text" data-reveal>
@@ -85,8 +85,8 @@
                     <span id="typed"></span><span class="type-cursor">|</span>
                 </div>
                 <p class="hero-sub">
-                    Backend · C++ · Python · AI — строю системы, а не просто пишу код.
-                    Студент 2 курса «Программная инженерия» КФУ им. В. И. Вернадского.
+                    C++ · Backend · Golang · Python — проектирую компиляторы и распределённые системы.
+                    Студент программной инженерии КФУ им. В. И. Вернадского.
                 </p>
                 <div class="hero-actions">
                     <a class="btn btn-primary" href="#projects">
@@ -113,15 +113,15 @@
         </div>
     </section>
 
-    <!-- Бегущая строка -->
+    <!-- Technology marquee -->
     <div class="marquee">
         <div class="marquee-track">
-            <span>C++</span><i>◆</i><span>Python</span><i>◆</i><span>Golang</span><i>◆</i><span>JavaScript</span><i>◆</i><span>Swift</span><i>◆</i><span>OpenGL</span><i>◆</i><span>PostgreSQL</span><i>◆</i><span>Docker</span><i>◆</i><span>MongoDB</span><i>◆</i><span>Redis</span><i>◆</i><span>Linux</span><i>◆</i><span>AI</span><i>◆</i>
-            <span>C++</span><i>◆</i><span>Python</span><i>◆</i><span>Golang</span><i>◆</i><span>JavaScript</span><i>◆</i><span>Swift</span><i>◆</i><span>OpenGL</span><i>◆</i><span>PostgreSQL</span><i>◆</i><span>Docker</span><i>◆</i><span>MongoDB</span><i>◆</i><span>Redis</span><i>◆</i><span>Linux</span><i>◆</i><span>AI</span><i>◆</i>
+            <span>C++</span><i>◆</i><span>Python</span><i>◆</i><span>Golang</span><i>◆</i><span>JavaScript</span><i>◆</i><span>Swift</span><i>◆</i><span>OpenGL</span><i>◆</i><span>PostgreSQL</span><i>◆</i><span>Docker</span><i>◆</i><span>MongoDB</span><i>◆</i><span>Redis</span><i>◆</i><span>Linux</span><i>◆</i>
+            <span>C++</span><i>◆</i><span>Python</span><i>◆</i><span>Golang</span><i>◆</i><span>JavaScript</span><i>◆</i><span>Swift</span><i>◆</i><span>OpenGL</span><i>◆</i><span>PostgreSQL</span><i>◆</i><span>Docker</span><i>◆</i><span>MongoDB</span><i>◆</i><span>Redis</span><i>◆</i><span>Linux</span><i>◆</i>
         </div>
     </div>
 
-    <!-- ОБО МНЕ -->
+    <!-- About section -->
     <section class="section" id="about">
         <div class="container">
             <p class="section-tag" data-reveal>01 · обо мне</p>
@@ -129,7 +129,7 @@
             <div class="about-grid">
                 <div class="about-text" data-reveal>
                     <p>
-                        Мне 17 лет, я живу в Симферополе. В IT пришёл осознанно: в 11 классе меня
+                        Я живу в Симферополе и специализируюсь на системной и серверной разработке. В IT пришёл осознанно: в 11 классе меня
                         заворожило, как устроены сайты и сервисы изнутри, и я начал изучать всё
                         самостоятельно. Начал с HTML и CSS — позже многих, но за год обогнал
                         большинство однокурсников благодаря полной отдаче и интересу к делу.
@@ -137,8 +137,7 @@
                     <p>
                         Моя настоящая стихия — <strong>бэкенд и алгоритмы</strong>. Я получаю удовольствие,
                         когда выстраиваю логику серверной части и продумываю эффективные решения.
-                        Сейчас активно работаю над собственным 3D-движком на C++/OpenGL и изучаю
-                        Vulkan для более глубокого контроля над графикой.
+                        Сейчас развиваю компилятор Aevix на C++/LLVM и собственный 3D-движок на C++/OpenGL.
                     </p>
                     <p>
                         Я — холодный и рациональный разработчик: важнее процесс и качество решения,
@@ -170,7 +169,7 @@
                     </div>
                     <div class="terminal-body">
                         <p><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></p>
-                        <p class="t-out">→ Осман Нури, 17 · студент «Программной инженерии»</p>
+                        <p class="t-out">→ Осман Нури Муспаев · C++ / Backend Developer</p>
                         <p><span class="t-prompt">$</span> <span class="t-cmd">cat focus.txt</span></p>
                         <p class="t-out">→ backend · алгоритмы · низкоуровневая графика</p>
                         <p><span class="t-prompt">$</span> <span class="t-cmd">ls ./projects/</span></p>
@@ -198,7 +197,7 @@
                         <span class="timeline-dot"></span>
                         <div>
                             <span class="timeline-date">2 курс · сейчас</span>
-                            <p>Микросервисы, AI, свой 3D-движок на OpenGL</p>
+                            <p>Aevix, микросервисы, свой 3D-движок на OpenGL</p>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -213,7 +212,7 @@
         </div>
     </section>
 
-    <!-- НАВЫКИ -->
+    <!-- Skills section -->
     <section class="section" id="skills">
         <div class="container">
             <p class="section-tag" data-reveal>02 · стек</p>
@@ -271,13 +270,13 @@
                 </div>
                 <div class="skill-card" data-reveal>
                     <div class="skill-head">
-                        <span class="skill-icon">🧠</span>
-                        <h3>AI / ML</h3>
+                        <span class="skill-icon">🧩</span>
+                        <h3>Компиляторы</h3>
                     </div>
                     <div class="chips">
-                        <span class="chip">AI-модули</span>
-                        <span class="chip">Интеграция в веб</span>
-                        <span class="chip">Торговые стратегии</span>
+                        <span class="chip">LLVM</span>
+                        <span class="chip">AST</span>
+                        <span class="chip">Статическая типизация</span>
                     </div>
                 </div>
                 <div class="skill-card" data-reveal>
@@ -295,7 +294,7 @@
         </div>
     </section>
 
-    <!-- ПРОЕКТЫ -->
+    <!-- Projects section -->
     <section class="section" id="projects">
         <div class="container">
             <p class="section-tag" data-reveal>03 · проекты</p>
@@ -322,16 +321,16 @@
                     <div class="project-index">02</div>
                     <div class="project-body">
                         <div class="project-top">
-                            <h3>Онлайн-биржа с AI-ассистентом <span class="project-emoji">📈</span></h3>
-                            <p class="project-tags">Python · AI · Gateway · Frontend</p>
+                            <h3>Компилятор Aevix <span class="project-emoji">⌘</span></h3>
+                            <p class="project-tags">C++ · LLVM · VS Code</p>
                         </div>
                         <p>
-                            График криптовалют в реальном времени, сделки с виртуальным балансом
-                            и встроенный AI-помощник для написания торговых стратегий.
-                            На серверной стороне крутятся Python-стратегии с собственной
-                            библиотекой, известной AI.
+                            Разрабатываю компилятор языка программирования с нуля: лексический и
+                            синтаксический анализ, AST и отдельный этап семантической проверки.
+                            Также создал расширение VS Code с подсветкой синтаксиса.
                         </p>
-                        <div class="project-role">Моя роль: AI-ядро · фронтенд · gateway · безопасность</div>
+                        <div class="project-role">Моя роль: архитектура компилятора · C++ · LLVM</div>
+                        <a class="project-role" href="https://github.com/AevixLang/Aevix" target="_blank" rel="noopener noreferrer">GitHub: AevixLang/Aevix ↗</a>
                     </div>
                 </article>
 
@@ -345,8 +344,7 @@
                         <p>
                             Мой самый личный и амбициозный проект. Процедурная генерация мира,
                             чанковая система 4×4, рендеринг на GPU, ломание и установка блоков,
-                            режим полёта. Доказывает, что я не просто изучаю C++ по учебникам —
-                            я строю настоящий 3D-движок.
+                            режим полёта и архитектуру для дальнейшего развития.
                         </p>
                         <div class="project-role">Стек: C++, OpenGL, Git, Linux</div>
                     </div>
@@ -355,7 +353,7 @@
         </div>
     </section>
 
-    <!-- УВЛЕЧЕНИЯ И ЯЗЫКИ -->
+    <!-- Hobbies and languages section -->
     <section class="section" id="hobbies">
         <div class="container">
             <p class="section-tag" data-reveal>04 · вне кода</p>
@@ -392,7 +390,7 @@
         </div>
     </section>
 
-    <!-- КОНТАКТ -->
+    <!-- Contact section -->
     <section class="section contact" id="contact">
         <div class="container">
             <div class="contact-card" data-reveal>
@@ -405,8 +403,11 @@
                     <a class="btn btn-primary" href="mailto:osman.muspaev@yandex.com">
                         <span>osman.muspaev@yandex.com</span>
                     </a>
-                    <a class="btn btn-ghost" href="https://t.me/Osman_Nuri_123" target="_blank" rel="noopener">
+                    <a class="btn btn-ghost" href="https://t.me/Osman_Nuri_123" target="_blank" rel="noopener noreferrer">
                         <span>@Osman_Nuri_123</span>
+                    </a>
+                    <a class="btn btn-ghost" href="https://github.com/OsmanMuspaev" target="_blank" rel="noopener noreferrer">
+                        <span>GitHub</span>
                     </a>
                 </div>
             </div>

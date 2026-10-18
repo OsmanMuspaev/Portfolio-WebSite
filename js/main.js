@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* ===== 0. ПРЕЛОАДЕР ===== */
+    /* ===== 0. PRELOADER ===== */
     const preloader = document.getElementById('preloader');
     window.addEventListener('load', () => {
         setTimeout(() => preloader.classList.add('hidden'), 400);
     });
     setTimeout(() => preloader.classList.add('hidden'), 3500);
 
-    /* ===== 1. ТРЁХМЕРНЫЙ ФОН ===== */
+    /* ===== 1. THREE-DIMENSIONAL BACKGROUND ===== */
     const canvas = document.getElementById('bg');
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -21,17 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const mouse = { x: 0, y: 0 };
 
-    // Плавающие светящиеся сферы-частицы
+    // Create floating, glowing particles.
     const particlesGeo = new THREE.BufferGeometry();
     const count = 1800;
     const positions = new Float32Array(count * 3);
     const sizes = new Float32Array(count);
     const colors = new Float32Array(count * 3);
     const palette = [
-        [0.43, 0.91, 1.0],   // циан
-        [0.65, 0.55, 0.98],  // фиолетовый
-        [0.96, 0.45, 0.71],  // розовый
-        [1.0, 1.0, 1.0],     // белый
+        [0.43, 0.91, 1.0],   // Cyan
+        [0.65, 0.55, 0.98],  // Violet
+        [0.96, 0.45, 0.71],  // Pink
+        [1.0, 1.0, 1.0],     // White
     ];
 
     for (let i = 0; i < count; i++) {
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const particles = new THREE.Points(particlesGeo, particleMat);
     scene.add(particles);
 
-    // Тороидальные кольца
+    // Create torus rings.
     const rings = [];
     const ringConfigs = [
         { color: 0x6ee7ff, radius: 3.4, tube: 0.018, pos: [2.2, 1.1, -4] },
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         rings.push(mesh);
     });
 
-    // Центральный wireframe-икосаэдр
+    // Create the central wireframe icosahedron.
     const icoGeo = new THREE.IcosahedronGeometry(1.15, 1);
     const icoMat = new THREE.MeshBasicMaterial({
         color: 0x6ee7ff,
@@ -130,12 +130,11 @@ document.addEventListener('DOMContentLoaded', () => {
         renderer.setSize(window.innerWidth, window.innerHeight);
     });
 
-    /* ===== 2. ПЕЧАТАЮЩИЙСЯ ТЕКСТ ===== */
+    /* ===== 2. TYPING TEXT ===== */
     const phrases = [
         'Backend-разработчик',
         'C++ / Python / Golang',
         'Создатель 3D-движка на OpenGL',
-        'AI-инженер по духу',
         'Студент «Программной инженерии»',
     ];
     const typedEl = document.getElementById('typed');
@@ -164,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     typeLoop();
 
-    /* ===== 3. REVEAL-АНИМАЦИИ ===== */
+    /* ===== 3. REVEAL ANIMATIONS ===== */
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -176,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('[data-reveal]').forEach((el) => revealObserver.observe(el));
 
-    /* ===== 4. НАВИГАЦИЯ ПРИ СКРОЛЛЕ + ПРОГРЕСС ===== */
+    /* ===== 4. SCROLL NAVIGATION AND PROGRESS ===== */
     const nav = document.querySelector('.nav');
     const scrollProgress = document.getElementById('scrollProgress');
     window.addEventListener('scroll', () => {
@@ -187,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollProgress.style.width = progress + '%';
     }, { passive: true });
 
-    /* ===== 4.1 МОБИЛЬНОЕ МЕНЮ ===== */
+    /* ===== 4.1 MOBILE MENU ===== */
     const burger = document.getElementById('navBurger');
     const mobileMenu = document.getElementById('mobileMenu');
     let menuOpen = false;
@@ -204,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => toggleMenu(false));
     });
 
-    /* ===== 4.2 СЧЁТЧИКИ ===== */
+    /* ===== 4.2 COUNTERS ===== */
     const countObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (!entry.isIntersecting) return;
@@ -224,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.6 });
     document.querySelectorAll('.count').forEach((el) => countObserver.observe(el));
 
-    /* ===== 4.3 МАГНИТНЫЕ КНОПКИ ===== */
+    /* ===== 4.3 MAGNETIC BUTTONS ===== */
     document.querySelectorAll('.btn').forEach((btn) => {
         btn.addEventListener('mousemove', (e) => {
             const rect = btn.getBoundingClientRect();
@@ -237,9 +236,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* ===== 4.4 ЖИВОЙ ТЕРМИНАЛ ===== */
+    /* ===== 4.4 LIVE TERMINAL ===== */
     const termLines = [
-        { prompt: '$', cmd: 'whoami', out: '→ Осман Нури, 17 · студент «Программной инженерии»' },
+        { prompt: '$', cmd: 'whoami', out: '→ Осман Нури Муспаев · C++ / Backend Developer' },
         { prompt: '$', cmd: 'cat focus.txt', out: '→ backend · алгоритмы · низкоуровневая графика' },
         { prompt: '$', cmd: 'ls ./projects/', out: '→ moodle-like / crypto-ai / minecraft-clone' },
         { prompt: '$', cmd: './dream --plan', out: '→ building my own startup...', blink: true },
@@ -294,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.4 });
     if (terminalBody) terminalObserver.observe(terminalBody);
 
-    /* ===== 5. КАСТОМНЫЙ КУРСОР ===== */
+    /* ===== 5. CUSTOM CURSOR ===== */
     const cursor = document.getElementById('cursor');
     const cursorGlow = document.getElementById('cursorGlow');
     const prefersMouse = window.matchMedia('(hover: hover)').matches;
@@ -324,7 +323,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ===== 6. 3D-TILT ДЛЯ ФОТО ===== */
+    /* ===== 6. PHOTO 3D TILT ===== */
     const photoFrame = document.querySelector('.hero-photo-frame');
     if (photoFrame) {
         const MAX = 14;
@@ -340,7 +339,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ===== 7. СВЕЧЕНИЕ КАРТОЧЕК ПРОЕКТОВ ЗА КУРСОРОМ ===== */
+    /* ===== 7. PROJECT CARD HOVER GLOW ===== */
     document.querySelectorAll('.project').forEach((card) => {
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();

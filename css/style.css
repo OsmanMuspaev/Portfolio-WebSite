@@ -40,7 +40,7 @@ a {
     text-decoration: none;
 }
 
-/* ===== 3D ФОН ===== */
+/* ===== THREE-DIMENSIONAL BACKGROUND ===== */
 #bg {
     position: fixed;
     inset: 0;
@@ -61,7 +61,7 @@ a {
     mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, black 20%, transparent 100%);
 }
 
-/* ===== КУРСОР ===== */
+/* ===== CURSOR ===== */
 .cursor,
 .cursor-glow {
     position: fixed;
@@ -97,7 +97,7 @@ body.cursor-hover .cursor-glow {
     .cursor, .cursor-glow { display: none; }
 }
 
-/* ===== НАВИГАЦИЯ ===== */
+/* ===== NAVIGATION ===== */
 .nav {
     position: fixed;
     top: 0;
@@ -175,7 +175,7 @@ body.cursor-hover .cursor-glow {
     box-shadow: 0 0 24px rgba(110, 231, 255, 0.25);
 }
 
-/* ===== ГЕРОЙ ===== */
+/* ===== HERO ===== */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -286,7 +286,7 @@ body.cursor-hover .cursor-glow {
     box-shadow: 0 8px 30px rgba(167, 139, 250, 0.2);
 }
 
-/* Фото */
+/* Photo */
 .hero-photo-wrap {
     display: flex;
     justify-content: center;
@@ -386,7 +386,7 @@ body.cursor-hover .cursor-glow {
     100% { top: 48px; }
 }
 
-/* ===== СЕКЦИИ ===== */
+/* ===== SECTIONS ===== */
 .section {
     padding: 110px 5vw;
     position: relative;
@@ -413,7 +413,7 @@ body.cursor-hover .cursor-glow {
     margin-bottom: 60px;
 }
 
-/* ===== ОБО МНЕ ===== */
+/* ===== ABOUT ===== */
 .about-grid {
     display: grid;
     grid-template-columns: 1.4fr 0.6fr;
@@ -467,7 +467,7 @@ body.cursor-hover .cursor-glow {
     line-height: 1.4;
 }
 
-/* ===== НАВЫКИ ===== */
+/* ===== SKILLS ===== */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -526,7 +526,7 @@ body.cursor-hover .cursor-glow {
     background: rgba(167, 139, 250, 0.12);
 }
 
-/* ===== ПРОЕКТЫ ===== */
+/* ===== PROJECTS ===== */
 .projects-list {
     display: flex;
     flex-direction: column;
@@ -618,7 +618,7 @@ body.cursor-hover .cursor-glow {
     font-weight: 500;
 }
 
-/* ===== УВЛЕЧЕНИЯ ===== */
+/* ===== HOBBIES ===== */
 .hobbies-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -687,7 +687,7 @@ body.cursor-hover .cursor-glow {
     white-space: nowrap;
 }
 
-/* ===== КОНТАКТ ===== */
+/* ===== CONTACT ===== */
 .contact-card {
     background: linear-gradient(135deg, rgba(110, 231, 255, 0.06), rgba(167, 139, 250, 0.06) 50%, rgba(244, 114, 182, 0.06));
     border: 1px solid var(--border);
@@ -713,7 +713,7 @@ body.cursor-hover .cursor-glow {
     flex-wrap: wrap;
 }
 
-/* ===== ФУТЕР ===== */
+/* ===== FOOTER ===== */
 .footer {
     padding: 40px 5vw;
     text-align: center;
@@ -726,7 +726,7 @@ body.cursor-hover .cursor-glow {
     color: var(--accent-3);
 }
 
-/* ===== REVEAL-АНИМАЦИИ ===== */
+/* ===== REVEAL ANIMATIONS ===== */
 [data-reveal] {
     opacity: 0;
     transform: translateY(40px);
@@ -738,7 +738,7 @@ body.cursor-hover .cursor-glow {
     transform: translateY(0);
 }
 
-/* ===== ПРЕЛОАДЕР ===== */
+/* ===== PRELOADER ===== */
 .preloader {
     position: fixed;
     inset: 0;
@@ -805,7 +805,7 @@ body.cursor-hover .cursor-glow {
     letter-spacing: 2px;
 }
 
-/* ===== ПРОГРЕСС СКРОЛЛА ===== */
+/* ===== SCROLL PROGRESS ===== */
 .scroll-progress {
     position: fixed;
     top: 0;
@@ -817,7 +817,7 @@ body.cursor-hover .cursor-glow {
     box-shadow: 0 0 12px rgba(110, 231, 255, 0.6);
 }
 
-/* ===== КНОПКА БУРГЕР + МОБИЛЬНОЕ МЕНЮ ===== */
+/* ===== BURGER BUTTON AND MOBILE MENU ===== */
 .nav-right {
     display: flex;
     align-items: center;
@@ -900,7 +900,7 @@ body.cursor-hover .cursor-glow {
     color: var(--accent-2);
 }
 
-/* ===== БЕГУЩАЯ СТРОКА ===== */
+/* ===== MARQUEE ===== */
 .marquee {
     overflow: hidden;
     border-top: 1px solid var(--border);
@@ -942,7 +942,7 @@ body.cursor-hover .cursor-glow {
     100% { transform: translateX(-50%); }
 }
 
-/* ===== ТЕРМИНАЛ ===== */
+/* ===== TERMINAL ===== */
 .about-bottom {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
@@ -1014,7 +1014,7 @@ body.cursor-hover .cursor-glow {
     animation: blink 1s infinite;
 }
 
-/* ===== ТАЙМЛАЙН ===== */
+/* ===== TIMELINE ===== */
 .timeline {
     display: flex;
     flex-direction: column;
@@ -1070,7 +1070,7 @@ body.cursor-hover .cursor-glow {
     color: var(--text-dim);
 }
 
-/* ===== АДАПТИВ ===== */
+/* ===== RESPONSIVE LAYOUT ===== */
 @media (max-width: 1024px) {
     .skills-grid { grid-template-columns: repeat(2, 1fr); }
     .hobbies-grid { grid-template-columns: repeat(2, 1fr); }

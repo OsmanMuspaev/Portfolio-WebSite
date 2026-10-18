@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Local portfolio exports and personal documents
+*.pdf
+
+# Editor and operating system files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local agent instructions
+AGENTS.md
